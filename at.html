@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me? ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4dfe6;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    text-align:center;
+    position:relative;
+}
+
+h1{
+    font-size:55px;
+    margin-bottom:50px;
+}
+
+.btn-area{
+    position:relative;
+    width:500px;
+    height:120px;
+    margin:auto;
+}
+
+button{
+    border:none;
+    border-radius:12px;
+    padding:15px 35px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+#yes{
+    background:#28a745;
+    color:white;
+    position:absolute;
+    left:230px;
+    top:0;
+    z-index:10;
+}
+
+#no{
+    background:#dc3545;
+    color:white;
+    position:absolute;
+    left:80px;
+    top:5px;
+    z-index:5;
+    transition:all 0.3s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Do You Love Me? ❤️</h1>
+
+    <div class="btn-area">
+        <button id="yes" onclick="love()">Yes ❤️</button>
+        <button id="no">No 💔</button>
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+let count = 0;
+
+noBtn.addEventListener("mouseenter", () => {
+
+    count++;
+
+    if(count === 1){
+        noBtn.style.left = "40px";
+        noBtn.style.top = "45px";
+    }
+
+    else if(count === 2){
+        noBtn.style.left = "150px";
+        noBtn.style.top = "55px";
+    }
+
+    else if(count === 3){
+        noBtn.style.left = "210px";
+        noBtn.style.top = "30px";
+    }
+
+    else if(count === 4){
+        noBtn.style.left = "245px";
+        noBtn.style.top = "5px";
+    }
+
+    else if(count === 5){
+        noBtn.style.left = "265px";
+        noBtn.style.top = "5px";
+        noBtn.style.zIndex = "1";
+    }
+
+    else{
+        noBtn.style.left = "285px";
+        noBtn.style.top = "5px";
+        noBtn.style.zIndex = "1";
+    }
+});
+
+function love(){
+    document.body.innerHTML = `
+        <div style="
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            background:#f4dfe6;
+            font-family:Arial;
+        ">
+            <h1>🎉 Congratulations! 🎉</h1>
+            <h2>You Fall in Love With Aditya Tiwari(Aadi) ❤️</h2>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
